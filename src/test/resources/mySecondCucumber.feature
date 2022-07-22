@@ -11,7 +11,7 @@ Feature: Login
     Then deberia ingresar a la aplicacion
 
     Examples:
-      | email             | password |
-      | eynar@eynar.com   | 123      |
-      | eynar2@eynar2.com | 456      |
-      | eynar3@eynar3.com | 789      |
+      | email                    | password |
+      | freddy@freddyaguilar.com | 123      |
+      | test@test.com            | 456      |
+      | test2@test.com           | 789      |
