@@ -29,13 +29,22 @@ configurations {
     }
 }
 
+// gradle cucumber -Psuite=@SUITE
+// gradle cucumber -Psuite=@Regression
 task cucumber() {
     dependsOn assemble, testClasses
     doLast {
         javaexec {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'runner', 'src/test/resources']
+            args = [
+                '--plugin',
+                'html:build/reports/cucumber/reporte.html',
+                '--glue',
+                'runner',
+                'src/test/resources',
+                '--tags'
+            ] + [suite]
         }
     }
 }

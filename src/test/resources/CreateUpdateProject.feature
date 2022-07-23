@@ -1,5 +1,6 @@
 Feature: Project
 
+  @Regression
   Scenario: Verify the create/update project
     Given la pagina "http://todo.ly" este abierta
     And yo quiero realizar el login
