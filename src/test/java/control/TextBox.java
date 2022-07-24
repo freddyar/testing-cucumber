@@ -13,6 +13,7 @@ public class TextBox extends Control {
 
     public void writeText(String value) {
         findControl();
+        control.clear();
         control.sendKeys(value);
     }
 }
